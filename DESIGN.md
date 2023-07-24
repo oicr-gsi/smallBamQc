@@ -1,12 +1,10 @@
 The reasoning for creating this workflow is found in the [project charter](https://docs.google.com/document/d/1wNfZL1yIn2HO5O6AVxXCGK-won5Nx_e5V98KUI4dUNk/edit#heading=h.cyxk68tr97gk): "To remove the bamqc workflow from emSeqQc and replace it with something simpler and faster."
 
-To get simplicity and efficiency, only the work necessary to generate QC Gate metrics is done:
+To get simplicity and efficiency, only the work necessary to generate QC Gate metrics is done in parallel:
 
 - samtools stats: mean insert size
 - picard MarkDuplicates: duplication percentage
 - bedtools: coverage histogram
-
-All three workflows are run in parallel.
 
 The workflow supports features (probes) for coverage calculations. If supplied, only those regions will be used to calculate coverage. If not, coverage will be calculated for all sites in the genome.
 
@@ -23,4 +21,6 @@ Efficiency was tested with large BAM files. As MarkDuplicates is very slow, it w
 - 400GB WG BAM: 3.5 hours
 - 219GB EX BAM (262529 features): 5.2 hours
 
-In both cases, bedtools was the limiting step.
+In both cases, bedtools was the limiting step. Memory usage is low for all tasks. 4GB is enough for very large BAM files. The workflow has no minimum read requirement. It will work with an empty BAM file.
+
+Downstream users may want to normalize for any downsampling that was performed. It isn't possible to determine downsampling from the tool (samtools, picard, bedtools) output. The workflow generates a JSON file that records all downsampling that was set. If no downsampling was performed, the value will be `null`.
