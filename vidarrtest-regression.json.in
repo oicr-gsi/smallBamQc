@@ -228,5 +228,224 @@
             "smallBamQc.storeDownsampledCounts.threads": null,
             "smallBamQc.storeDownsampledCounts.timeout": null
         }
+    },
+    {
+        "id": "fullTS",
+        "description": "No downsampling for a 1GB BAM with features",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/fullTS.calculate.output",
+                "type": "script"
+            }
+        ],
+        "metadata": {
+            "smallBamQc.bedtoolsCoverage": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullTS_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.downsampledCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullTS_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.picard": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullTS_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.samtools": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullTS_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "arguments": {
+            "smallBamQc.bam": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLCS_0002_Ly_R_PE_357_TS_N2K_VAL_REVTAR6_2by50val_230629_VH01326_8_AACM2W3M5_1_ACTAGGAG-TATGGCAC.bam",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smallBamQc.bedtoolsCoverageFull.memory": null,
+            "smallBamQc.bedtoolsCoverageFull.modules": null,
+            "smallBamQc.bedtoolsCoverageFull.threads": null,
+            "smallBamQc.bedtoolsCoverageFull.timeout": null,
+            "smallBamQc.bedtoolsCoverageSmall.memory": null,
+            "smallBamQc.bedtoolsCoverageSmall.modules": null,
+            "smallBamQc.bedtoolsCoverageSmall.threads": null,
+            "smallBamQc.bedtoolsCoverageSmall.timeout": null,
+            "smallBamQc.bedtoolsReadsToUse": null,
+            "smallBamQc.features": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smallBamQc.featuresHead.memory": null,
+            "smallBamQc.featuresHead.modules": null,
+            "smallBamQc.featuresHead.threads": null,
+            "smallBamQc.featuresHead.timeout": null,
+            "smallBamQc.featuresToUse": null,
+            "smallBamQc.markDuplicates.jobMemory": null,
+            "smallBamQc.markDuplicates.modules": null,
+            "smallBamQc.markDuplicates.picardMaxMemMb": null,
+            "smallBamQc.markDuplicates.threads": null,
+            "smallBamQc.markDuplicates.timeout": null,
+            "smallBamQc.opticalDuplicatePixelDistance": 2500,
+            "smallBamQc.outputFileNamePrefix": "String",
+            "smallBamQc.picardMarkDuplicatesReadsToUse": null,
+            "smallBamQc.samtoolsHead.memory": null,
+            "smallBamQc.samtoolsHead.modules": null,
+            "smallBamQc.samtoolsHead.threads": null,
+            "smallBamQc.samtoolsHead.timeout": null,
+            "smallBamQc.samtoolsStatsFull.memory": null,
+            "smallBamQc.samtoolsStatsFull.modules": null,
+            "smallBamQc.samtoolsStatsFull.threads": null,
+            "smallBamQc.samtoolsStatsFull.timeout": null,
+            "smallBamQc.samtoolsStatsReadsToUse": null,
+            "smallBamQc.samtoolsStatsSmall.memory": null,
+            "smallBamQc.samtoolsStatsSmall.modules": null,
+            "smallBamQc.samtoolsStatsSmall.threads": null,
+            "smallBamQc.samtoolsStatsSmall.timeout": null,
+            "smallBamQc.storeDownsampledCounts.memory": null,
+            "smallBamQc.storeDownsampledCounts.modules": null,
+            "smallBamQc.storeDownsampledCounts.threads": null,
+            "smallBamQc.storeDownsampledCounts.timeout": null
+        }
+    },
+    {
+        "id": "fullWG",
+        "description": "No downsampling for a 2GB BAM with no features (WG)",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/fullWG.calculate.output",
+                "type": "script"
+            }
+        ],
+        "metadata": {
+            "smallBamQc.bedtoolsCoverage": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullWG_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.downsampledCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullWG_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.picard": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullWG_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.samtools": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_fullWG_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "arguments": {
+            "smallBamQc.bam": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLDS_0001_04_LB01-01_D05480113_220624_A00469_0327_BHNGYYDSX2_3_CGGCTAAT-CTCGTTCT.bam",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smallBamQc.bedtoolsCoverageFull.memory": null,
+            "smallBamQc.bedtoolsCoverageFull.modules": null,
+            "smallBamQc.bedtoolsCoverageFull.threads": null,
+            "smallBamQc.bedtoolsCoverageFull.timeout": null,
+            "smallBamQc.bedtoolsCoverageSmall.memory": null,
+            "smallBamQc.bedtoolsCoverageSmall.modules": null,
+            "smallBamQc.bedtoolsCoverageSmall.threads": null,
+            "smallBamQc.bedtoolsCoverageSmall.timeout": null,
+            "smallBamQc.bedtoolsReadsToUse": null,
+            "smallBamQc.features": null,
+            "smallBamQc.featuresHead.memory": null,
+            "smallBamQc.featuresHead.modules": null,
+            "smallBamQc.featuresHead.threads": null,
+            "smallBamQc.featuresHead.timeout": null,
+            "smallBamQc.featuresToUse": null,
+            "smallBamQc.markDuplicates.jobMemory": null,
+            "smallBamQc.markDuplicates.modules": null,
+            "smallBamQc.markDuplicates.picardMaxMemMb": null,
+            "smallBamQc.markDuplicates.threads": null,
+            "smallBamQc.markDuplicates.timeout": null,
+            "smallBamQc.opticalDuplicatePixelDistance": 2500,
+            "smallBamQc.outputFileNamePrefix": "String",
+            "smallBamQc.picardMarkDuplicatesReadsToUse": null,
+            "smallBamQc.samtoolsHead.memory": null,
+            "smallBamQc.samtoolsHead.modules": null,
+            "smallBamQc.samtoolsHead.threads": null,
+            "smallBamQc.samtoolsHead.timeout": null,
+            "smallBamQc.samtoolsStatsFull.memory": null,
+            "smallBamQc.samtoolsStatsFull.modules": null,
+            "smallBamQc.samtoolsStatsFull.threads": null,
+            "smallBamQc.samtoolsStatsFull.timeout": null,
+            "smallBamQc.samtoolsStatsReadsToUse": null,
+            "smallBamQc.samtoolsStatsSmall.memory": null,
+            "smallBamQc.samtoolsStatsSmall.modules": null,
+            "smallBamQc.samtoolsStatsSmall.threads": null,
+            "smallBamQc.samtoolsStatsSmall.timeout": null,
+            "smallBamQc.storeDownsampledCounts.memory": null,
+            "smallBamQc.storeDownsampledCounts.modules": null,
+            "smallBamQc.storeDownsampledCounts.threads": null,
+            "smallBamQc.storeDownsampledCounts.timeout": null
+        }
     }
 ]
