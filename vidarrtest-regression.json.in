@@ -113,5 +113,120 @@
             "smallBamQc.storeDownsampledCounts.threads": null,
             "smallBamQc.storeDownsampledCounts.timeout": null
         }
+    },
+    {
+        "id": "no_read_input",
+        "description": "Input is downsampled to no reads for all analyses.",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/emptyTS.calculate.output",
+                "type": "script"
+            }
+        ],
+        "metadata": {
+            "smallBamQc.bedtoolsCoverage": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_no_read_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.downsampledCounts": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_no_read_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.picard": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_no_read_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "smallBamQc.samtools": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_smallBamQc_no_read_input_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "arguments": {
+            "smallBamQc.bam": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLCS_0002_Ly_R_PE_357_TS_N2K_VAL_REVTAR6_2by50val_230629_VH01326_8_AACM2W3M5_1_ACTAGGAG-TATGGCAC.bam",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smallBamQc.bedtoolsCoverageFull.memory": null,
+            "smallBamQc.bedtoolsCoverageFull.modules": null,
+            "smallBamQc.bedtoolsCoverageFull.threads": null,
+            "smallBamQc.bedtoolsCoverageFull.timeout": null,
+            "smallBamQc.bedtoolsCoverageSmall.memory": null,
+            "smallBamQc.bedtoolsCoverageSmall.modules": null,
+            "smallBamQc.bedtoolsCoverageSmall.threads": null,
+            "smallBamQc.bedtoolsCoverageSmall.timeout": null,
+            "smallBamQc.bedtoolsReadsToUse": 0,
+            "smallBamQc.features": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "smallBamQc.featuresHead.memory": null,
+            "smallBamQc.featuresHead.modules": null,
+            "smallBamQc.featuresHead.threads": null,
+            "smallBamQc.featuresHead.timeout": null,
+            "smallBamQc.featuresToUse": null,
+            "smallBamQc.markDuplicates.jobMemory": null,
+            "smallBamQc.markDuplicates.modules": null,
+            "smallBamQc.markDuplicates.picardMaxMemMb": null,
+            "smallBamQc.markDuplicates.threads": null,
+            "smallBamQc.markDuplicates.timeout": null,
+            "smallBamQc.opticalDuplicatePixelDistance": 2500,
+            "smallBamQc.outputFileNamePrefix": "String",
+            "smallBamQc.picardMarkDuplicatesReadsToUse": 0,
+            "smallBamQc.samtoolsHead.memory": null,
+            "smallBamQc.samtoolsHead.modules": null,
+            "smallBamQc.samtoolsHead.threads": null,
+            "smallBamQc.samtoolsHead.timeout": null,
+            "smallBamQc.samtoolsStatsFull.memory": null,
+            "smallBamQc.samtoolsStatsFull.modules": null,
+            "smallBamQc.samtoolsStatsFull.threads": null,
+            "smallBamQc.samtoolsStatsFull.timeout": null,
+            "smallBamQc.samtoolsStatsReadsToUse": 0,
+            "smallBamQc.samtoolsStatsSmall.memory": null,
+            "smallBamQc.samtoolsStatsSmall.modules": null,
+            "smallBamQc.samtoolsStatsSmall.threads": null,
+            "smallBamQc.samtoolsStatsSmall.timeout": null,
+            "smallBamQc.storeDownsampledCounts.memory": null,
+            "smallBamQc.storeDownsampledCounts.modules": null,
+            "smallBamQc.storeDownsampledCounts.threads": null,
+            "smallBamQc.storeDownsampledCounts.timeout": null
+        }
     }
 ]
