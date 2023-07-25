@@ -147,7 +147,7 @@ task samtoolsStatsSmall {
         # Non-primary reads (same read aligned multipe times) and supplementary reads (same read split up and each split aligned indpendantly) are excluded
         # They will still be counted (filtered out column), but won't be used for other statistics
         # This ensures the total read count of samtools stats matches the total reads produced by the machine
-        samtools head -n ~{readsToUse} --threads ~{threads} ~{bam} | samtools stats -F 2304- > ~{outputFileNamePrefix}.stats.txt
+        samtools head -n ~{readsToUse} --threads ~{threads} ~{bam} | samtools stats -F 2304 - > ~{outputFileNamePrefix}.stats.txt
     >>>
 
     output {
