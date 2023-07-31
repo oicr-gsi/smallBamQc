@@ -1,6 +1,7 @@
 {
     "names": [
-        "smallBamQc"
+        "smallBamQc",
+        "smallBamQcTesting"
     ],
     "wdl": "smallBamQc.wdl"
 }
