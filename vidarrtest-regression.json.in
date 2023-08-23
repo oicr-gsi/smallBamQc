@@ -70,18 +70,7 @@
             "smallBamQc.bedtoolsCoverageSmall.threads": null,
             "smallBamQc.bedtoolsCoverageSmall.timeout": null,
             "smallBamQc.bedtoolsReadsToUse": 1,
-            "smallBamQc.features": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
+            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
             "smallBamQc.featuresHead.memory": null,
             "smallBamQc.featuresHead.modules": null,
             "smallBamQc.featuresHead.threads": null,
@@ -185,18 +174,7 @@
             "smallBamQc.bedtoolsCoverageSmall.threads": null,
             "smallBamQc.bedtoolsCoverageSmall.timeout": null,
             "smallBamQc.bedtoolsReadsToUse": 0,
-            "smallBamQc.features": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
+            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
             "smallBamQc.featuresHead.memory": null,
             "smallBamQc.featuresHead.modules": null,
             "smallBamQc.featuresHead.threads": null,
@@ -300,18 +278,7 @@
             "smallBamQc.bedtoolsCoverageSmall.threads": null,
             "smallBamQc.bedtoolsCoverageSmall.timeout": null,
             "smallBamQc.bedtoolsReadsToUse": null,
-            "smallBamQc.features": {
-                "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
-                    "externalIds": [
-                        {
-                            "id": "TEST",
-                            "provider": "TEST"
-                        }
-                    ]
-                },
-                "type": "EXTERNAL"
-            },
+            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
             "smallBamQc.featuresHead.memory": null,
             "smallBamQc.featuresHead.modules": null,
             "smallBamQc.featuresHead.threads": null,
