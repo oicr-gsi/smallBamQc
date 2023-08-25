@@ -6,7 +6,7 @@ workflow smallBamQc {
         Int opticalDuplicatePixelDistance
         String outputFileNamePrefix
         Int? bedtoolsReadsToUse
-        File? features
+        String? features  # This is a file path, but using the `File` type doesn't play well with Shesmu/Vidarr type system
         Int? featuresToUse
         Int? picardMarkDuplicatesReadsToUse
         Int? samtoolsStatsReadsToUse
@@ -323,7 +323,7 @@ task markDuplicates {
 
 task featuresHead {
     input {
-        File features
+        String features
         Int? featuresToUse
         String modules = ""
         Float memory = 0.1
@@ -375,7 +375,7 @@ task featuresHead {
 task bedtoolsCoverageFull {
     input {
         File bam
-        File? features
+        String? features
         String outputFileNamePrefix
         String modules = "bedtools/2.27 samtools/1.16.1"
         Int memory = 4
@@ -435,7 +435,7 @@ task bedtoolsCoverageFull {
 task bedtoolsCoverageSmall {
     input {
         File bam
-        File? features
+        String? features
         Int readsToUse
         String outputFileNamePrefix
         String modules = "bedtools/2.27 samtools/1.16.1"
