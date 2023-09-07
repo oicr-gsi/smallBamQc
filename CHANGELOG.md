@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
+Changed: Removed explicit filtering out of non-primary and supplementary reads from samtools stats. It does it by default.
+
 ## 0.3.0 [2023-08-23]
 Changed: `features` parameter type from `File` to `String`
 
