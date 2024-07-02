@@ -32,7 +32,7 @@ Parameter|Value|Description
 Parameter|Value|Default|Description
 ---|---|---|---
 `bedtoolsReadsToUse`|Int?|None|If defined, use that many reads from the beginning of the BAM file for bedtools analysis. If not defined, use all BAM reads.
-`features`|File?|None|If defined, bedtools calculates coverage for those features only. If not defined, calculate coverage for all reads (whole genome).
+`features`|String?|None|If defined, bedtools calculates coverage for those features only. If not defined, calculate coverage for all reads (whole genome).
 `featuresToUse`|Int?|None|If defined, use that many features from the beginning of the features file. If not defined, use all features.
 `picardMarkDuplicatesReadsToUse`|Int?|None|If defined, MarkDuplicates uses that many reads from the beginning of the BAM file. If not defined, use all BAM reads. Note that a new BAM file is created if defined, so using a large number will temporarily generate a second large BAM file.
 `samtoolsStatsReadsToUse`|Int?|None|If defined, use that many read from the beginning of the BAM file for samtools stats. If not defined, use all BAM reads.
@@ -78,12 +78,12 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`samtools`|File|Samtools stats output
-`picard`|File|Picard MarkDuplicates output
-`bedtoolsCoverage`|File|Bedtools coverage histogram output
-`downsampledCounts`|File|JSON file recording what downsampling was done
+Output | Type | Description | Labels
+---|---|---|---
+`samtools`|File|Samtools stats output|vidarr_label: samtools
+`picard`|File|Picard MarkDuplicates output|vidarr_label: picard
+`bedtoolsCoverage`|File|Bedtools coverage histogram output|vidarr_label: bedtoolsCoverage
+`downsampledCounts`|File|JSON file recording what downsampling was done|vidarr_label: downsampledCounts
 
 
 ## Commands
