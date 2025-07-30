@@ -10,7 +10,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/singleTS.calculate.output",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ],
@@ -51,7 +51,7 @@
         "arguments": {
             "smallBamQc.bam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLCS_0002_Ly_R_PE_357_TS_N2K_VAL_REVTAR6_2by50val_230629_VH01326_8_AACM2W3M5_1_ACTAGGAG-TATGGCAC.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/GLCS_Test.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -70,7 +70,7 @@
             "smallBamQc.bedtoolsCoverageSmall.threads": null,
             "smallBamQc.bedtoolsCoverageSmall.timeout": null,
             "smallBamQc.bedtoolsReadsToUse": 1,
-            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
+            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/EVOLVE-CHARM.TS.hg38.bed",
             "smallBamQc.featuresHead.memory": null,
             "smallBamQc.featuresHead.modules": null,
             "smallBamQc.featuresHead.threads": null,
@@ -114,7 +114,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/emptyTS.calculate.output",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ],
@@ -155,7 +155,7 @@
         "arguments": {
             "smallBamQc.bam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLCS_0002_Ly_R_PE_357_TS_N2K_VAL_REVTAR6_2by50val_230629_VH01326_8_AACM2W3M5_1_ACTAGGAG-TATGGCAC.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/GLCS_Test.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -174,7 +174,7 @@
             "smallBamQc.bedtoolsCoverageSmall.threads": null,
             "smallBamQc.bedtoolsCoverageSmall.timeout": null,
             "smallBamQc.bedtoolsReadsToUse": 0,
-            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
+            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/EVOLVE-CHARM.TS.hg38.bed",
             "smallBamQc.featuresHead.memory": null,
             "smallBamQc.featuresHead.modules": null,
             "smallBamQc.featuresHead.threads": null,
@@ -218,7 +218,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/fullTS.calculate.output",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/output_metrics/workflow_test_03.metrics",
                 "type": "script"
             }
         ],
@@ -259,7 +259,7 @@
         "arguments": {
             "smallBamQc.bam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLCS_0002_Ly_R_PE_357_TS_N2K_VAL_REVTAR6_2by50val_230629_VH01326_8_AACM2W3M5_1_ACTAGGAG-TATGGCAC.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/GLCS_Test.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -278,7 +278,7 @@
             "smallBamQc.bedtoolsCoverageSmall.threads": null,
             "smallBamQc.bedtoolsCoverageSmall.timeout": null,
             "smallBamQc.bedtoolsReadsToUse": null,
-            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/EVOLVE-CHARM.TS.hg38.bed",
+            "smallBamQc.features": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/EVOLVE-CHARM.TS.hg38.bed",
             "smallBamQc.featuresHead.memory": null,
             "smallBamQc.featuresHead.modules": null,
             "smallBamQc.featuresHead.threads": null,
@@ -322,7 +322,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/expected_output/fullWG.calculate.output",
+                "output_metrics": "/.mounts/labs/gsi/testdata/smallBamQc/output_metrics/workflow_test_04.metrics",
                 "type": "script"
             }
         ],
@@ -363,7 +363,7 @@
         "arguments": {
             "smallBamQc.bam": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/input_data/GLDS_0001_04_LB01-01_D05480113_220624_A00469_0327_BHNGYYDSX2_3_CGGCTAAT-CTCGTTCT.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/smallBamQc/test_inputs/GLDS_Test.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
