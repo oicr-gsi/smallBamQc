@@ -122,12 +122,24 @@ workflow smallBamQc {
                 url : "https://bedtools.readthedocs.io"
             }
         ]
-        output_meta: {
-            samtools: "Samtools stats output",
-            picard: "Picard MarkDuplicates output",
-            bedtoolsCoverage: "Bedtools coverage histogram output",
-            downsampledCounts: "JSON file recording what downsampling was done"
-        }
+    output_meta: {
+    samtools: {
+        description: "Samtools stats output",
+        vidarr_label: "samtools"
+    },
+    picard: {
+        description: "Picard MarkDuplicates output",
+        vidarr_label: "picard"
+    },
+    bedtoolsCoverage: {
+        description: "Bedtools coverage histogram output",
+        vidarr_label: "bedtoolsCoverage"
+    },
+    downsampledCounts: {
+        description: "JSON file recording what downsampling was done",
+        vidarr_label: "downsampledCounts"
+    }
+}
     }
 }
 
